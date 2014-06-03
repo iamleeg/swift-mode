@@ -1,7 +1,7 @@
 ;;; swift-mode.el --- Major mode for editing Swift files
 
 (setq swift-keywords
-      '("break" "continue" "default" "do" "else" "for" "func" "if" "in" "let" "return" "self" "struct" "super" "switch" "unowned" "var" "weak" "while"))
+      '("break" "class" "continue" "default" "do" "else" "for" "func" "if" "import" "in" "let" "return" "self" "struct" "super" "switch" "unowned" "var" "weak" "while"))
 
 (setq swift-builtins
       '("println"))
