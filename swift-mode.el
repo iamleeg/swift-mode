@@ -19,8 +19,24 @@
                                  (,swift-strings-regexp . font-lock-string-face)
                                  (,swift-builtins-regexp . font-lock-builtin-face)))
 
-(define-derived-mode swift-mode fundamental-mode "Swift"
-   "Major mode for editing Swift files."
+(defvar swift-mode-map
+  (let ((map (make-sparse-keymap)))
+    map)
+  "Keymap used in Swift mode.")
+
+(defvar swift-mode-syntax-table
+  (let ((table (make-syntax-table)))
+    table)
+  "Syntax table for Swift files.")
+
+;;;###autoload
+(add-to-list 'auto-mode-alist (cons (purecopy "\\.swift\\'") 'swift-mode))
+
+;;;###autoload
+(define-derived-mode swift-mode prog-mode "Swift"
+   "Major mode for editing Swift files.
+
+\\{swift-mode-map}"
    (setq font-lock-defaults '((swift-font-lock-keywords))))
 
 (provide 'swift-mode)
