@@ -2,6 +2,14 @@
 
 Needs help. Please send your pull requests.
 
+##Requirements
+
+You must be using Emacs 24 or newer. The Emacs currently distributed
+with OS X is 22.1.1 which is _not_ capable of supporting
+`swift-mode`. Consider downloading the latest [Emacs for Mac OS
+X](http://emacsformacosx.com/) release, or consult your favourite
+package manager.
+
 ##Installation
 
 Put `swift-mode.el` somewhere in your load-path
@@ -10,10 +18,6 @@ Add the following to your `~/.emacs` file:
 
     (require 
         'swift-mode) 
-    (setq auto-mode-alist 
-        (append 
-            '(("\\.swift$" . swift-mode)) 
-                auto-mode-alist)) 
 
  `swift-mode` will now be called whenever a `.swift` file is opened,
  or by executing `M-x swift-mode`
@@ -30,6 +34,5 @@ Lots! Please send your pull requests.
  - Highlight variables, type names and constants
  - Evaluate region
  - REPL mode
- - comments
  - Highlight bad syntax
  - Highlight type errors :->
