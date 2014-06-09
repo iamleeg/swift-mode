@@ -1,6 +1,7 @@
 # Emacs swift-mode
 
-Needs help. Please send your pull requests.
+An Emacs major mode for [Swift](https://developer.apple.com/swift/).  
+Provides syntax highlighting, indentation support and a few commands.
 
 ##Requirements
 
