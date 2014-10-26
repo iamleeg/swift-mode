@@ -12,8 +12,23 @@
 ;; Safe file variables
 (put 'swift-comment-column 'safe-local-variable 'integerp)
 
+(setq swift-keywords-declarations
+      '("class" "enum" "extension" "func" "import" "init" "internal" "let" "operator" "private" "protocol" "public" "static" "struct" "subscript" "typealias" "var"))
+
+(setq swift-keywords-statements
+      '("break" "case" "continue" "default" "do" "else" "fallthrough" "for" "if" "in" "return" "switch" "where" "while"))
+
+(setq swift-keywords-expressions
+      '("as" "dynamicType" "false" "is" "nil" "self" "Self" "super" "true" "__COLUMN__" "__FILE__" "__FUNCTION__" "__LINE__"))
+
+(setq swift-keywords-context
+      '("associativity" "convenience" "dynamic" "didSet" "final" "get" "infix" "inout" "lazy" "left" "mutating" "none" "nonmutating" "optional" "override" "postfix" "precedence" "prefix" "Protocol" "required" "right" "set" "Type" "unowned" "weak" "willSet"))
+
 (setq swift-keywords
-      '("break" "class" "continue" "default" "do" "else" "for" "func" "if" "import" "in" "let" "return" "self" "struct" "super" "switch" "unowned" "var" "weak" "while"))
+      (append swift-keywords-declarations
+              swift-keywords-statements
+              swift-keywords-expressions
+              swift-keywords-context))
 
 (setq swift-builtins
       '("println"))
